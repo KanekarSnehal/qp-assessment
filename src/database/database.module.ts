@@ -1,6 +1,10 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigService } from '@nestjs/config';
+import { Grocery } from '../models/grocery.model';
+import { User } from '../models/user.model';
+import { Order } from '../models/order.model';
+import { OrderItem } from '../models/orderItem.model';
 
 @Module({
   imports: [
@@ -17,7 +21,7 @@ import { ConfigService } from '@nestjs/config';
         synchronize: true,
       }),
     }),
-    SequelizeModule.forFeature([]),
+    SequelizeModule.forFeature([Grocery, User, Order, OrderItem]),
   ],
   exports: [SequelizeModule],
 })
