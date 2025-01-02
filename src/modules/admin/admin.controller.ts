@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
 import { AdminService } from './admin.service';
-import { Grocery } from '../models/grocery.model';
+import { Grocery } from '../../models/grocery.model';
 
 @Controller('admin')
 export class AdminController {
