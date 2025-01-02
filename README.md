@@ -31,8 +31,8 @@ A **NestJS** application to manage grocery booking operations, providing APIs fo
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd grocery-booking-api
+git clone https://github.com/KanekarSnehal/qp-assessment.git
+cd qp-assessment
 ```
 
 ### 2. Install Dependencies
