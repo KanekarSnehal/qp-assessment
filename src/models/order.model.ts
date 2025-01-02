@@ -1,4 +1,4 @@
-import { BelongsTo, Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
+import { BelongsTo, Column, DataType, ForeignKey, HasMany, Model, Table } from 'sequelize-typescript';
 import { User } from './user.model';
 import { OrderItem } from './orderItem.model';
 
@@ -17,6 +17,13 @@ export class Order extends Model<Order> {
     defaultValue: 0,
   })
   totalAmount: number;
+
+  @ForeignKey(() => User)
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: false,
+  })
+  userId: number;
 
   @BelongsTo(() => User)
   user: User;
